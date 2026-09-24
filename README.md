@@ -13,15 +13,11 @@ Everything works offline except Google Fonts, which fall back to system fonts.
 
 ## Deploy it (make it a public URL)
 
-Option A — GitHub Pages (free, ~5 minutes)
-1. Create a GitHub account / log in at https://github.com
-2. Click "New repository" → name it e.g. "resume-portal" → set it Public → Create
-3. Click "uploading an existing file" and drag in BOTH files (or use git):
-   git clone https://github.com/<your-username>/resume-portal.git
-   cp index.html README.md resume-portal/
-   cd resume-portal && git add . && git commit -m "Add resume portal" && git push
-4. Repo Settings → Pages → Source: "Deploy from a branch" → Branch: main, folder: / (root) → Save
-5. Your site goes live at https://<your-username>.github.io/resume-portal/
+GitHub Pages deployment is configured in `.github/workflows/deploy-pages.yml`.
+In the repository, open **Settings → Pages** and set the publishing source to
+**GitHub Actions**. The workflow deploys the portal on every push to `main`.
+For this repository, the site URL is:
+https://vidharvananda.github.io/ResumePortal/
 
 Option B — Netlify Drop (fastest, no account needed to start)
 1. Go to https://app.netlify.com/drop
